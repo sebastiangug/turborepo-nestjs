@@ -1,12 +1,12 @@
-import { INestApplication } from '@nestjs/common';
-import { NestFactory } from '@nestjs/core';
-import { Request, Response } from 'express';
-import { AppModule } from './app.module';
+import { INestApplication } from "@nestjs/common";
+import { NestFactory } from "@nestjs/core";
+import { Request, Response } from "express";
+import { GraphqlServerAppModule } from "./app.module";
 
 const getApp = async (): Promise<INestApplication> => {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(GraphqlServerAppModule);
 
-  app.use('/health', (req: Request, res: Response) => {
+  app.use("/health", (req: Request, res: Response) => {
     return res.status(200).send();
   });
 
