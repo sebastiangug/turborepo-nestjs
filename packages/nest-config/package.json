@@ -1,0 +1,16 @@
+{
+  "name": "@myapp/nest-config",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "devDependencies": {
+    "@nestjs/common": "9.0.8",
+    "@types/node": "16.0.0",
+    "@myapp/tsconfig": "workspace:*",
+    "rxjs": "7.5.5",
+    "reflect-metadata": "0.1.13"
+  },
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "type": "module"
+}
