@@ -4,8 +4,8 @@ exports.viteNodeApp = void 0;
 const core_1 = require("@nestjs/core");
 const app_module_1 = require("./app.module");
 const getApp = async () => {
-    const app = await core_1.NestFactory.create(app_module_1.AppModule);
-    app.use('/health', (req, res) => {
+    const app = await core_1.NestFactory.create(app_module_1.GraphqlServerAppModule);
+    app.use("/health", (req, res) => {
         return res.status(200).send();
     });
     return app;

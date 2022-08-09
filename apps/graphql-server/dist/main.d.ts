@@ -1,2 +1,2 @@
-import { INestApplication } from '@nestjs/common';
+import { INestApplication } from "@nestjs/common";
 export declare const viteNodeApp: Promise<INestApplication>;
