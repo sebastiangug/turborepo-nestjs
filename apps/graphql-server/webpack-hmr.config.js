@@ -7,7 +7,7 @@ module.exports = function (options, webpack) {
     entry: ["webpack/hot/poll?100", options.entry],
     externals: [
       nodeExternals({
-        allowlist: ["webpack/hot/poll?100"],
+        allowlist: ["webpack/hot/poll?100", /@myapp\/.*/],
       }),
     ],
     plugins: [
@@ -16,7 +16,10 @@ module.exports = function (options, webpack) {
       new webpack.WatchIgnorePlugin({
         paths: [/\.js$/, /\.d\.ts$/],
       }),
-      new RunScriptWebpackPlugin({ name: options.output.filename, autoRestart: false }),
+      new RunScriptWebpackPlugin({
+        name: options.output.filename,
+        autoRestart: false,
+      }),
     ],
   };
 };

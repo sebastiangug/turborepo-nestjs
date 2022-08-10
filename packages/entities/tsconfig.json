@@ -1,0 +1,5 @@
+{
+  "extends": "@yeo/tsconfig/nest.json",
+  "include": ["."],
+  "exclude": ["dist", "build", "node_modules"]
+}

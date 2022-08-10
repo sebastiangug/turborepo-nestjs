@@ -1,4 +1,12 @@
 "use strict";
+exports.id = 0;
+exports.ids = null;
+exports.modules = {
+
+/***/ 16:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,32 +16,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.RootResolver = exports.HealthResponse = void 0;
-const graphql_1 = require("@nestjs/graphql");
-let HealthResponse = class HealthResponse {
-};
-__decorate([
-    (0, graphql_1.Field)(),
-    __metadata("design:type", String)
-], HealthResponse.prototype, "status", void 0);
-HealthResponse = __decorate([
-    (0, graphql_1.ObjectType)({ description: 'status response' })
-], HealthResponse);
-exports.HealthResponse = HealthResponse;
+var _a;
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.RootResolver = void 0;
+const graphql_1 = __webpack_require__(7);
 let RootResolver = class RootResolver {
     getHealth() {
-        return { status: 'HEALTHY' };
+        return { status: "HEALTHY" };
     }
 };
 __decorate([
     (0, graphql_1.Query)((returns) => HealthResponse),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
-    __metadata("design:returntype", HealthResponse)
+    __metadata("design:returntype", typeof (_a = typeof HealthResponse !== "undefined" && HealthResponse) === "function" ? _a : Object)
 ], RootResolver.prototype, "getHealth", null);
 RootResolver = __decorate([
     (0, graphql_1.Resolver)()
 ], RootResolver);
 exports.RootResolver = RootResolver;
-//# sourceMappingURL=root.resolver.js.map
+
+
+/***/ })
+
+};
+exports.runtime =
+/******/ function(__webpack_require__) { // webpackRuntimeModules
+/******/ /* webpack/runtime/getFullHash */
+/******/ (() => {
+/******/ 	__webpack_require__.h = () => ("655e72088807e6cbf9c9")
+/******/ })();
+/******/ 
+/******/ }
+;

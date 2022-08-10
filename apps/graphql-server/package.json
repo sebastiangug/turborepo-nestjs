@@ -7,9 +7,9 @@
   "license": "UNLICENSED",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "nest build --webpack",
+    "build": "nest build --webpack --webpackPath webpack.config.js",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "dev": "webpack --config webpack.config.js --watch",
+    "dev": "nest build --webpack --webpackPath webpack-hmr.config.js --watch",
     "start": "node dist/main",
     "test": "jest",
     "test:watch": "jest --watchAll",
@@ -26,7 +26,8 @@
     "apollo-server-express": "3.6.7",
     "reflect-metadata": "0.1.13",
     "rimraf": "3.0.2",
-    "rxjs": "7.5.5"
+    "rxjs": "7.5.5",
+    "@myapp/entities": "workspace:*"
   },
   "devDependencies": {
     "@nestjs/cli": "8.2.8",

@@ -2,6 +2,7 @@ import { INestApplication } from "@nestjs/common";
 import { NestFactory } from "@nestjs/core";
 import { Request, Response } from "express";
 import { GraphqlServerAppModule } from "./app.module";
+declare const module: any;
 
 const getApp = async (): Promise<INestApplication> => {
   const app = await NestFactory.create(GraphqlServerAppModule);
@@ -15,8 +16,11 @@ const getApp = async (): Promise<INestApplication> => {
 
 async function bootstrap(): Promise<void> {
   const app = await getApp();
-  await app.listen(3100);
+  await app.listen(process.env.PORT ?? 3100);
+
+  if (module.hot) {
+    module.hot.accept();
+    module.hot.dispose(() => app.close());
+  }
 }
 bootstrap();
-
-export const viteNodeApp = getApp();
