@@ -165,6 +165,7 @@ module.exports = function (updatedModules, renewedModules) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core_1 = __webpack_require__(4);
 const app_module_1 = __webpack_require__(5);
+process.env.NEST_DEBUG = true;
 const getApp = async () => {
     const app = await core_1.NestFactory.create(app_module_1.GraphqlServerAppModule);
     app.use("/health", (req, res) => {
@@ -585,7 +586,7 @@ exports.HealthResponse = HealthResponse;
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("db39e10fae5825261a63")
+/******/ 		__webpack_require__.h = () => ("b82e73e6607993c13b4f")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */

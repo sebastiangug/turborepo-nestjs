@@ -2,6 +2,9 @@ import { INestApplication } from "@nestjs/common";
 import { NestFactory } from "@nestjs/core";
 import { Request, Response } from "express";
 import { GraphqlServerAppModule } from "./app.module";
+
+process.env.NEST_DEBUG = true as any;
+
 declare const module: any;
 
 const getApp = async (): Promise<INestApplication> => {

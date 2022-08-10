@@ -1,5 +1,5 @@
 {
-  "extends": "@yeo/tsconfig/nest.json",
+  "extends": "@myapp/tsconfig/nest.json",
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"]
 }
